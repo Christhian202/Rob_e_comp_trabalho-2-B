@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Sensor de Gás e Fumaça</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Detector e Sensor de Gás 🚨</h1>
+            <p>Projeto de Automação, IoT e Segurança Residencial</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="project-detail">
+            <a href="index.html" class="btn btn-secondary">← Voltar para Todos os Projetos</a>
+            
+            <h2>Descrição do Projeto</h2>
+            <p>Este sistema de segurança automatizado monitora a qualidade do ar no ambiente em tempo real para identificar vazamentos de gases inflamáveis (como GLP e Metano) ou presença de fumaça, disparando alarmes visuais e sonoros instantâneos.</p>
+
+            <h2>Componentes Utilizados</h2>
+            <ul>
+                <li>1x Placa Arduino Uno</li>
+                <li>1x Módulo Sensor de Gás e Fumaça MQ-2 (ou MQ-5 / MQ-135)</li>
+                <li>1x Buzzer Sonoro Piezoelétrico (5V)</li>
+                <li>1x LED Vermelho (Alerta) e 1x LED Verde (Status Normal)</li>
+                <li>Resistores de 220Ω</li>
+                <li>Protoboard e Jumpers</li>
+            </ul>
+
+            <h2>Como Funciona</h2>
+            <p>O sensor MQ-2 mede a concentração de partículas no ar através de sua leitura analógica. O microcontrolador lê constantemente esses dados. Se o valor ultrapassar o limiar de segurança estipulado no código, o Arduino aciona o alarme sonoro (Buzzer) e pisca o LED vermelho indicando perigo. Caso a leitura esteja dentro do normal, apenas o LED verde permanece aceso.</p>
+
+            <h2>Código e Montagem</h2>
+            <p>Confira o código fonte com a calibração do sensor e o diagrama do circuito elétrico no repositório.</p>
+            
+            <br>
+            <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" class="btn">Ver Código no GitHub</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o GitHub Pages • Retrospectiva Anual</p>
+    </footer>
+
+</body>
+</html>

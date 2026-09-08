@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Mãozinha do Tchau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Mãozinha do Tchau 🖐️</h1>
+            <p>Projeto de Robótica Interativa e Automação</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="project-detail">
+            <a href="index.html" class="btn btn-secondary">← Voltar para Todos os Projetos</a>
+            
+            <h2>Descrição do Projeto</h2>
+            <p>A <strong>Mãozinha do Tchau</strong> é um projeto interativo desenvolvido para simular o movimento humano de aceno automático. Utilizando controle de servos e sensores de proximidade, o dispositivo detecta a presença de pessoas e responde amigavelmente.</p>
+
+            <h2>Componentes Utilizados</h2>
+            <ul>
+                <li>1x Placa Arduino Uno ou Nano</li>
+                <li>1x Micro Servomotor SG90 (9g)</li>
+                <li>1x Sensor Ultrassônico HC-SR04 (ou Sensor Infravermelho IR)</li>
+                <li>Estrutura em MDF, acrílico ou impressa em 3D</li>
+                <li>Protoboard e Jumpers de conexão</li>
+            </ul>
+
+            <h2>Como Funciona</h2>
+            <p>O sensor ultrassônico envia constantes pulso de som para medir a distância de objetos à sua frente. Quando alguém se aproxima (distância menor que o limite configurado, ex: 30 cm), o Arduino aciona o servomotor. O motor realiza um movimento alternado de varredura (ex: varrendo repetidamente entre 45° e 135°), criando a ilusão perfeita de uma mão acenando.</p>
+
+            <h2>Código e Montagem</h2>
+            <p>Confira o esquema elétrico e o código em C++ / Arduino no repositório do projeto.</p>
+            
+            <br>
+            <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" class="btn">Ver Código no GitHub</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o GitHub Pages • Retrospectiva Anual</p>
+    </footer>
+
+</body>
+</html>

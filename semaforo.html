@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Semáforo Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Semáforo Inteligente 🚦</h1>
+            <p>Projeto de Eletrônica Básica e Temporização</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="project-detail">
+            <a href="index.html" class="btn btn-secondary">← Voltar para Todos os Projetos</a>
+            
+            <h2>Descrição do Projeto</h2>
+            <p>Projeto focado no aprendizado dos conceitos fundamentais de lógica de programação e temporização. Ele simula o comportamento real de um semáforo de trânsito para carros e pedestres, utilizando LEDs organizados sequencialmente.</p>
+
+            <h2>Componentes Utilizados</h2>
+            <ul>
+                <li>1x Placa Arduino Uno</li>
+                <li>3x LEDs de 5mm (Vermelho, Amarelo e Verde) para o sinal dos carros</li>
+                <li>2x LEDs de 5mm (Vermelho e Verde) para o sinal dos pedestres</li>
+                <li>5x Resistores de 220Ω</li>
+                <li>1x Botão Pushbutton (opcional, para travessia de pedestres)</li>
+                <li>Protoboard e Jumpers</li>
+            </ul>
+
+            <h2>Como Funciona</h2>
+            <p>O microcontrolador gerencia o estado dos LEDs utilizando a função de temporização (`delay` ou `millis`). O código alterna o acendimento dos LEDs na ordem padrão: Verde (Aberto) -> Amarelo (Atenção) -> Vermelho (Fechado). Se integrado com um botão de travessia, o programa interrompe o fluxo normal para permitir a passagem segura de pedestres.</p>
+
+            <h2>Código e Montagem</h2>
+            <p>Acesse o repositório para visualizar as variações do código (temporização simples ou com interrupção por botão) e o esquema de ligação.</p>
+            
+            <br>
+            <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" class="btn">Ver Código no GitHub</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o GitHub Pages • Retrospectiva Anual</p>
+    </footer>
+
+</body>
+</html>
