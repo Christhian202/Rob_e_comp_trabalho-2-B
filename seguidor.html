@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Seguidor de Linha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Robô Seguidor de Linha 🤖</h1>
+            <p>Projeto de Robótica e Automação</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="project-detail">
+            <a href="index.html" class="btn btn-secondary">← Voltar para Todos os Projetos</a>
+            
+            <h2>Descrição do Projeto</h2>
+            <p>Este projeto consiste no desenvolvimento de um robô capaz de identificar e seguir uma linha preta desenhada sobre uma superfície clara. Ele usa leitura infravermelha para tomar decisões em tempo real.</p>
+
+            <h2>Componentes Utilizados</h2>
+            <ul>
+                <li>1x Placa Arduino Uno</li>
+                <li>2x Sensores Ópticos Reflexivos (TCRT5000)</li>
+                <li>1x Módulo Driver Ponte H L298N</li>
+                <li>2x Motores DC com caixa de redução</li>
+                <li>1x Chassi de acrílico com roda boba</li>
+                <li>Bateria Li-Ion 9V</li>
+            </ul>
+
+            <h2>Como Funciona</h2>
+            <p>Os sensores IR emitem luz infravermelha. Quando sobre a superfície branca, a luz reflete e o sensor envia nível lógico baixo. Ao encontrar a linha preta, a luz é absorvida e o sensor altera o sinal, fazendo o microcontrolador ajustar a velocidade dos motores para corrigir a trajetória.</p>
+
+            <h2>Código do Arduino / Esquemático</h2>
+            <p>Você pode conferir o código fonte completo e o circuito no repositório oficial do projeto.</p>
+            
+            <br>
+            <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" class="btn">Ver Código no GitHub</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o GitHub Pages • Retrospectiva Anual</p>
+    </footer>
+
+</body>
+</html>

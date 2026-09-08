@@ -1,46 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recapitulação - Projetos de Robótica</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrospectiva de Projetos do Ano</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones (FontAwesome) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <header>
-    <h1>Robótica 2026</h1>
-    <p>Recapitulação dos projetos e sites desenvolvidos durante as aulas</p>
-  </header>
-
-  <main class="container">
-    <section class="projects-grid">
-
-      <article class="card">
-        <div>
-          <h2>Braço Robótico</h2>
-          <p>Site explicativo sobre a montagem e programação de um braço robótico com servomotores e Arduino.</p>
-          <div class="tags">
-            <span class="tag">Arduino</span>
-            <span class="tag">C++</span>
-            <span class="tag">HTML/CSS</span>
-          </div>
+    <header>
+        <div class="container">
+            <h1>Retrospectiva de Projetos 🚀</h1>
+            <p>Uma coleção de tudo o que foi desenvolvido ao longo do ano.</p>
         </div>
-        <a href="#" class="btn" target="_blank">Ver Projeto</a>
-      </article>
+    </header>
 
-      <article class="card">
-        <div>
-          <h2>Carrinho Seguidor de Linha</h2>
-          <p>Documentação do robô móvel que utiliza sensores infravermelhos para seguir percursos demarcados.</p>
-          <div class="tags">
-            <span class="tag">Sensores</span>
-            <span class="tag">Robótica Móvel</span>
-            <span class="tag">JavaScript</span>
-          </div>
+    <main class="container">
+        <!-- ÁREA DE PESQUISA -->
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Pesquisar projeto (ex: Robô, Sensor, Semáforo)..." onkeyup="filtrarProjetos()">
+        </section>
+
+        <!-- GRADE DE PROJETOS -->
+        <section class="projects-grid" id="projectsGrid">
+
+            <!-- Card 1: Seguidor de Linha -->
+            <div class="project-card" data-title="seguidor de linha robo arduino automacao">
+                <span class="badge">Robótica</span>
+                <h3>Robô Seguidor de Linha</h3>
+                <p>Robô autônomo utilizando sensores ópticos reflexivos e ponte H para controle de motores.</p>
+                <a href="seguidor-de-linha.html" class="btn">Ver Projeto →</a>
+            </div>
+
+            <!-- Card 2: Sensor de Gás -->
+            <div class="project-card" data-title="sensor de gas mq-2 seguranca iot arduino">
+                <span class="badge">IoT & Segurança</span>
+                <h3>Detector e Sensor de Gás</h3>
+                <p>Sistema de alarme para detecção de vazamento de gás e fumaça com alerta sonoro e LED.</p>
+                <a href="sensor-de-gas.html" class="btn">Ver Projeto →</a>
+            </div>
+
+            <!-- Card 3: Semáforo -->
+            <div class="project-card" data-title="semaforo inteligente arduino transito leds">
+                <span class="badge">Eletrônica Básica</span>
+                <h3>Semáforo Inteligente</h3>
+                <p>Controle de tráfego com temporização para pedestres e carros utilizando microcontrolador.</p>
+                <a href="semaforo.html" class="btn">Ver Projeto →</a>
+            </div>
+
+            <!-- Card Extra (Exemplo para adicionar mais) -->
+            <div class="project-card" data-title="estacao meteorologica temperatura umidade dht11">
+                <span class="badge">Sistemas Embarcados</span>
+                <h3>Estação Meteorológica</h3>
+                <p>Medição de temperatura e umidade com exibição dos dados em um display LCD.</p>
+                <a href="estacao-meteorologica.html" class="btn">Ver Projeto →</a>
+            </div>
+
+        </section>
+
+        <!-- Mensagem de "Nenhum resultado" -->
+        <div id="noResults" class="no-results" style="display: none;">
+            Nenhum projeto encontrado com esse nome.
         </div>
-        <a href="#" class="btn" target="_blank">Ver Projeto</a>
-      </article>
+    </main>
 
-      <article class="card">
-        <div>
+    <footer>
+        <p>Desenvolvido para o GitHub Pages • Retrospectiva Anual</p>
+    </footer>
+
+    <!-- SCRIPT DE PESQUISA -->
+    <script>
+        function filtrarProjetos() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('project-card');
+            let hasResults = false;
+
+            for (let i = 0; i < cards.length; i++) {
+                let titleData = cards[i].getAttribute('data-title').toLowerCase();
+                let cardText = cards[i].innerText.toLowerCase();
+
+                // Verifica se a busca está no título oculto (data-title) ou no texto visível do card
+                if (titleData.includes(input) || cardText.includes(input)) {
+                    cards[i].style.display = "flex";
+                    hasResults = true;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            // Exibe mensagem caso não ache nenhum projeto
+            document.getElementById('noResults').style.display = hasResults ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
